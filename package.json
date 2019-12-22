@@ -1,0 +1,25 @@
+{
+  "name": "node_api_auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrzysztofBalejko/Node-API-with-Authentication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrzysztofBalejko/Node-API-with-Authentication/issues"
+  },
+  "homepage": "https://github.com/KrzysztofBalejko/Node-API-with-Authentication#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
