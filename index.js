@@ -1,7 +1,15 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+const app = express();
+
+// Import routes
+const authRoute = require('./routes/auth');
+
+// Middleware
+app.use(bodyParser.json());
+app.use('/api/user', authRoute);
 
 
 const options = {
@@ -17,13 +25,5 @@ mongoose.connect(
     options,
     () => console.log('connected to DB !')
 );
-
-// Import routes
-const authRoute = require('./routes/auth');
-
-// Middleware
-app.use('/api/user', authRoute);
-app.use(express.json());
-
 
 app.listen(3000, () => console.log("server up and running"));
