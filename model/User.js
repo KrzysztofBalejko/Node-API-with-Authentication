@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
         min: 6
     },
     email: {
-        type: StaticRange,
+        type: String,
         required: true,
         max: 255,
         min: 6
@@ -24,4 +24,4 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.module('User', 'userSchema');
+module.exports = mongoose.model('User', userSchema);

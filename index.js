@@ -20,7 +20,10 @@ mongoose.connect(
 
 // Import routes
 const authRoute = require('./routes/auth');
+
+// Middleware
 app.use('/api/user', authRoute);
+app.use(express.json());
 
 
 app.listen(3000, () => console.log("server up and running"));
