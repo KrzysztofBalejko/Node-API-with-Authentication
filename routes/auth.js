@@ -2,6 +2,9 @@ const express = require('express');
 const User = require('../model/User');
 const router = express.Router();
 
+// Validation
+const Joi = require('@hapi/joi');
+
 
 router.post('/register', async (req,res) => {
 
