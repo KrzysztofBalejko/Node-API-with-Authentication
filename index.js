@@ -6,11 +6,12 @@ const app = express();
 
 // Import routes
 const authRoute = require('./routes/auth');
+const postRoute = require('./routes/posts');
 
 // Middleware
 app.use(bodyParser.json());
 app.use('/api/user', authRoute);
-
+app.use('/api/posts', postRoute);
 
 const options = {
     useNewUrlParser: true,
